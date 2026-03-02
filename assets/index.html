@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="./assets/images/Icon.svg" type="image/x-icon">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Section -->
+    <div id="sidebar" class="sidebar">
+        <img id="sidebarLogo" src="./images/Frame 1.png" alt="Logo">
+        <ul id="sidebarNavList">
+            <li><a id="linkDashboard" href="index.html">Dashboard</a></li>
+            <li><a id="linkReports" href="reports.html">Reports</a></li>
+            <li><a id="linkReportDetails" href="report-details.html">Report Details</a></li>
+            <li><a id="linkMyView" href="myview.html">My View</a></li>
+            <li><a id="linkUsers" href="users.html">Users & Roles</a></li>
+            <li><a id="linkSettings" href="settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="mainContent" class="main">
+
+        <!-- Top Navigation Bar -->
+        <div id="topbar" class="topbar d-flex align-items-center justify-content-between p-3 mb-4 bg-white rounded-3 shadow-sm">
+            <h2 id="dashboardTitle">Dashboard</h2>
+        </div>
+
+        <h3 id="sectionTitle" class="section-title">Reports Numbers</h3>
+
+        <!-- Statistics Cards Container -->
+        <div id="cardsContainer" class="cards">
+            <!-- New Reports Card -->
+            <div id="newReportsCard" class="card new">
+                <h4>New Reports</h4>
+                <h2 id="newCount">40000</h2>
+            </div>
+
+            <!-- Solved Reports Card -->
+            <div id="solvedReportsCard" class="card solved">
+                <h4>Solved</h4>
+                <h2 id="solvedCount">40000</h2>
+            </div>
+
+            <!-- Cancelled Reports Card -->
+            <div id="cancelledReportsCard" class="card cancelled">
+                <h4>Cancelled</h4>
+                <h2 id="cancelledCount">55000</h2>
+            </div>
+
+            <!-- Latest Reports Card -->
+            <div id="latestReportsCard" class="card latest">
+                <h4>Latest Reports</h4>
+                <h2 id="latestCount">1432</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts Section -->
+    <script id="mainScript" src="./js/main.js"></script>
+    <script id="bootstrapScript" src="./js/bootstrap.bundle.min.js"></script>
+    
+    <script id="sidebarActiveScript">
+        /**
+         * Sidebar Active Link Handler
+         * Highlights the current active link based on the URL
+         */
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".sidebar ul li a");
+
+            links.forEach(link => {
+                // Check if current page URL includes the link's href
+                if (window.location.href.includes(link.getAttribute("href"))) {
+                    link.parentElement.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
