@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="./assets/images/Icon.svg" type="image/x-icon">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Section (Transforms to Topbar on Mobile) -->
+    <div id="sidebar" class="sidebar">
+        <div class="logo">
+            <img id="sidebarLogo" src="./images/Frame 1.png" alt="Logo" style="max-height: 40px;">
+        </div>
+        <ul id="sidebarNavList">
+            <li><a id="linkDashboard" href="index.html">Dashboard</a></li>
+            <li><a id="linkReports" href="reports.html">Reports</a></li>
+            <li><a id="linkMyView" href="myview.html">My View</a></li>
+            <li><a id="linkUsers" href="users.html">Users & Roles</a></li>
+            <li><a id="linkSettings" href="settings.html">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="mainContent" class="main">
+
+        <!-- New Top Navbar (As requested from image) -->
+        <nav id="navbarCustom" class="navbar-custom ">
+            <!-- Notification Icon Button -->
+            <a href="#" id="notificationBtn" class="nav-icon-btn">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+
+            <!-- Messages Icon Button -->
+            <a href="#" id="messagesBtn" class="nav-icon-btn">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+
+            <!-- User Profile Dropdown -->
+            <div id="userProfileDropdown" class="dropdown user-profile-dropdown">
+                <div id="profileTrigger" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                    <img id="userAvatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar" class="user-avatar">
+                </div>
+                <ul id="profileDropdownMenu" class="dropdown-menu dropdown-menu-end profile-dropdown-menu">
+                    <li><a id="loginLink" class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
+                    <li><a id="signupLink" class="dropdown-item" href="signup.html"><i class="fas fa-user-plus me-2"></i>Sign up</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a id="profileLink" class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Body Content -->
+        <div id="contentBody" class="content-body">
+            
+            <!-- Dashboard Title Section -->
+            <div id="topbar" class="d-flex align-items-center justify-content-between p-3 mb-4 bg-white rounded-3 shadow-sm">
+                <h2 id="dashboardTitle" class="mb-0">Dashboard</h2>
+                <!-- Example of a button in topbar -->
+               
+            </div>
+
+            <h3 id="sectionTitle" class="section-title">Reports Numbers</h3>
+
+            <!-- Statistics Cards Container -->
+            
+<div id="dashboardStats" class="cards-wrapper">
+
+    <!-- New Reports Card -->
+    <div id="cardNewReports" class="stat-card new">
+        <div class="stat-card-header">
+            <h4 class="stat-card-title">New Reports</h4>
+            <i class="fas fa-file-circle-plus stat-card-icon"></i>
+        </div>
+        <!-- The ID 'newCount' is ready to be linked with JavaScript -->
+        <h2 id="newCount" class="stat-card-number" data-target="40000">40,000</h2>
+        <div class="stat-card-footer">
+            <i class="fas fa-arrow-up"></i>
+            <span>+12% from last week</span>
+        </div>
+    </div>
+
+    <!-- Solved Reports Card -->
+    <div id="cardSolved" class="stat-card solved">
+        <div class="stat-card-header">
+            <h4 class="stat-card-title">Solved</h4>
+            <i class="fas fa-circle-check stat-card-icon"></i>
+        </div>
+        <!-- The ID 'solvedCount' is ready to be linked with JavaScript -->
+        <h2 id="solvedCount" class="stat-card-number" data-target="40000">40,000</h2>
+        <div class="stat-card-footer">
+            <i class="fas fa-check-double"></i>
+            <span>85% Resolution Rate</span>
+        </div>
+    </div>
+
+    <!-- Cancelled Reports Card -->
+    <div id="cardCancelled" class="stat-card cancelled">
+        <div class="stat-card-header">
+            <h4 class="stat-card-title">Cancelled</h4>
+            <i class="fas fa-circle-xmark stat-card-icon"></i>
+        </div>
+        <!-- The ID 'cancelledCount' is ready to be linked with JavaScript -->
+        <h2 id="cancelledCount" class="stat-card-number" data-target="55000">55,000</h2>
+        <div class="stat-card-footer">
+            <i class="fas fa-circle-info"></i>
+            <span>Mainly duplicate reports</span>
+        </div>
+    </div>
+
+    <!-- Latest Reports Card -->
+    <div id="cardLatest" class="stat-card latest">
+        <div class="stat-card-header">
+            <h4 class="stat-card-title">Latest Reports</h4>
+            <i class="fas fa-clock-rotate-left stat-card-icon"></i>
+        </div>
+        <!-- The ID 'latestCount' is ready to be linked with JavaScript -->
+        <h2 id="latestCount" class="stat-card-number" data-target="1432">1,432</h2>
+        <div class="stat-card-footer">
+            <i class="fas fa-bolt"></i>
+            <span>Updated 2 mins ago</span>
+        </div>
+    </div>
+
+</div>
+
+        </div> <!-- End Content Body -->
+
+    </div> <!-- End Main Content -->
+
+    <!-- Scripts Section -->
+    <script id="mainScript" src="./js/main.js"></script>
+    <script id="bootstrapScript" src="./js/bootstrap.bundle.min.js"></script>
+    
+    <script id="sidebarLogic">
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".sidebar ul li a");
+
+            // Highlight active link based on current URL
+            navLinks.forEach(link => {
+                if (window.location.href.includes(link.getAttribute("href"))) {
+                    link.parentElement.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
